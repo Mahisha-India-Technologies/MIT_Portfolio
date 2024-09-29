@@ -1,0 +1,24 @@
+{
+    "name": "mit-project",
+    "builds": [
+      {
+        "src": "Backend/server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "Frontend/dist/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/Backend/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/Frontend/dist/$1"
+      }
+    ]
+  }
+  

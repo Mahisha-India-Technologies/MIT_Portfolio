@@ -9,3 +9,4 @@ Backend/.env
 # Ignore logs
 Frontend/npm-debug.log
 Backend/npm-debug.log
+.vercel
